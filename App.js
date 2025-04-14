@@ -1,8 +1,12 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; 
 import MenuPage from "./MenuPage.js";
 import Cart from "./Cart.js";
-import Navigation from "./Navigation"; // ✅ Added Navigation
+import Navigation from "./Navigation"; 
+import Homepage from "./HomePage"; 
+import OffersPage from "./OffersPage"; // Import OffersPage
 import "bootstrap/dist/css/bootstrap.min.css";
+import Contactus from "./Contactus.js"
 
 export default function App() {
   const [cart, setCart] = useState([]);
@@ -54,18 +58,28 @@ export default function App() {
   };
 
   return (
-    <>
-      <Navigation /> {/* ✅ Your Navigation Bar */}
+    <Router>
+      <Navigation />
       <div className="container my-4">
-        <MenuPage addToCart={addToCart} />
-        <Cart
-          cart={cart}
-          increment={increment}
-          decrement={decrement}
-          removeFromCart={removeFromCart}
-          updateCustomization={updateCustomization}
-        />
+        <Routes>
+          <Route path="/" element={<Homepage />} /> {/* Homepage route */}
+          <Route path="/menu" element={<MenuPage addToCart={addToCart} />} />
+          <Route path="/Contactus" element={<Contactus />} />
+          <Route
+            path="/cart"
+            element={
+              <Cart
+                cart={cart}
+                increment={increment}
+                decrement={decrement}
+                removeFromCart={removeFromCart}
+                updateCustomization={updateCustomization}
+              />
+            }
+          />
+          <Route path="/offers" element={<OffersPage />} /> {/* Offers Page route */}
+        </Routes>
       </div>
-    </>
+    </Router>
   );
 }

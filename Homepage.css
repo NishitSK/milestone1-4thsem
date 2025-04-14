@@ -1,16 +1,39 @@
+.homepage {
+  background-image: url('https://images.pexels.com/photos/4725702/pexels-photo-4725702.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
 
 .hero-section {
-  background: url('./images/icecream-bg.jpg') no-repeat center center/cover;
-  color: white;
-  padding: 100px 0;
   text-align: center;
 }
 
 .features {
-  margin-top: 50px;
+  margin-top: 4rem;
 }
 
-.features h3 {
-  margin-bottom: 15px;
-  color: #007bff;
+@media (max-width: 767px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section p {
+    font-size: 1.2rem;
+  }
 }

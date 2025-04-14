@@ -1,0 +1,29 @@
+.contact-us {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .contact-us h2 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .contact-us .form-label {
+    font-weight: bold;
+  }
+  
+  .contact-us .form-control {
+    border-radius: 0.375rem;
+  }
+  
+  .contact-us .btn {
+    font-size: 1.1rem;
+  }
+  
+  @media (max-width: 767px) {
+    .contact-us {
+      padding: 10px;
+    }
+  }
+  
