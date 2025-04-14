@@ -7,6 +7,7 @@ import Homepage from "./Homepage";
 import OffersPage from "./OffersPage";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Contactus from "./Contactus.js"
+import Signup from "./signup.js"
 
 export default function App() {
   const [cart, setCart] = useState([]);
@@ -65,6 +66,7 @@ export default function App() {
           <Route path="/" element={<Homepage />} /> {/* Homepage route */}
           <Route path="/menu" element={<MenuPage addToCart={addToCart} />} />
           <Route path="/Contactus" element={<Contactus />} />
+          <Route path="/signup" element={<Signup />} />
           <Route
             path="/cart"
             element={

@@ -36,7 +36,7 @@ const Navigation = () => {
             <Nav.Link as={NavLink} to="/Cart" activeClassName="active">Cart</Nav.Link>
             <Nav.Link as={NavLink} to="/Offers" activeClassName="active">Offers</Nav.Link>
             <Nav.Link as={NavLink} to="/Contactus" activeClassName="active">Contact Us</Nav.Link>
-            <Nav.Link href="#">Sign In</Nav.Link>
+            <Nav.Link as={NavLink} to="/signup" activeClassName="active">Sign up</Nav.Link>
           </Nav>
 
           <Form className="d-flex me-3" onSubmit={handleSearchSubmit}>
