@@ -55,7 +55,6 @@ export default function App() {
   return (
     <div className="container my-4">
       <MenuPage addToCart={addToCart} />
-
       <Cart
         cart={cart}
         increment={increment}

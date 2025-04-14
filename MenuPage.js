@@ -20,36 +20,30 @@ const MenuPage = ({ addToCart }) => {
     addToCart({ ...item, size: "Regular", flavor: "Classic" });
   };
 
-
-return (
-  <Container className="mt-5">
-    <h2 className="text-center mb-4">Our Ice Cream Menu</h2>
-    <Row>
-      {iceCreamItems.map(item => (
-        <Col key={item.id} md={4} className="mb-4">
-          <Card className="h-100">
-            <Card.Img variant="top" src={item.image} className="ice-cream-image" />
-            <Card.Body className="d-flex flex-column">
-              <Card.Title>{item.name}</Card.Title>
-              <Card.Text>{item.description}</Card.Text>
-              <div className="mt-auto">
-                <h6 className="text-primary">₹{item.price}</h6>
-                <Button
-                  variant="outline-primary"
-                  size="sm"
-                  className="mt-2"
-                  onClick={() => handleOrder(item)}
-                >
-                  Order Now
-                </Button>
-              </div>
-            </Card.Body>
-          </Card>
-        </Col>
-      ))}
-    </Row>
-  </Container>
-);
+  return (
+    <Container className="mt-5">
+      <h2 className="text-center mb-4">Our Ice Cream Menu</h2>
+      <Row>
+        {iceCreamItems.map(item => (
+          <Col key={item.id} md={4} className="mb-4">
+            <Card className="h-100">
+              <Card.Img variant="top" src={item.image} className="ice-cream-image" />
+              <Card.Body className="d-flex flex-column">
+                <Card.Title>{item.name}</Card.Title>
+                <Card.Text>{item.description}</Card.Text>
+                <div className="mt-auto">
+                  <h6 className="text-primary">{item.price}</h6>
+                  <Button variant="outline-primary" size="sm" className="mt-2" onClick={() => handleOrder(item)}>
+                    Order Now
+                  </Button>
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+    </Container>
+  );
 };
 
 export default MenuPage;
