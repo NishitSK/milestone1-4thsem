@@ -1,17 +1,14 @@
-import './App.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import {Button} from "react-bootstrap"
+import React from 'react';
+import MenuPage from './MenuPage';
 
 function App() {
   return (
-    <div className="App">
 
-      <Button variant='danger'>GIT</Button>
-
-      <h1>Start the Ideal Cafe</h1>
-
+    <div>
+      <MenuPage />
     </div>
   );
 }
 
 export default App;
+
