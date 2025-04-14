@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import MenuPage from "./MenuPage.js";
 import Cart from "./Cart.js";
 import Navigation from "./Navigation"; 
-import Homepage from "./HomePage"; 
-import OffersPage from "./OffersPage"; // Import OffersPage
+import Homepage from "./Homepage"; 
+import OffersPage from "./OffersPage";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Contactus from "./Contactus.js"
 
@@ -64,10 +64,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Homepage />} /> {/* Homepage route */}
           <Route path="/menu" element={<MenuPage addToCart={addToCart} />} />
-<<<<<<< HEAD
           <Route path="/Contactus" element={<Contactus />} />
-=======
->>>>>>> 388dff50f8ad7be65f00dae2b12283207813d317
           <Route
             path="/cart"
             element={
