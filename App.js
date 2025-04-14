@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import MenuPage from "./MenuPage.js";
 import Cart from "./Cart.js";
+import Navigation from "./Navigation"; // ✅ Added Navigation
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function App() {
@@ -53,15 +54,18 @@ export default function App() {
   };
 
   return (
-    <div className="container my-4">
-      <MenuPage addToCart={addToCart} />
-      <Cart
-        cart={cart}
-        increment={increment}
-        decrement={decrement}
-        removeFromCart={removeFromCart}
-        updateCustomization={updateCustomization}
-      />
-    </div>
+    <>
+      <Navigation /> {/* ✅ Your Navigation Bar */}
+      <div className="container my-4">
+        <MenuPage addToCart={addToCart} />
+        <Cart
+          cart={cart}
+          increment={increment}
+          decrement={decrement}
+          removeFromCart={removeFromCart}
+          updateCustomization={updateCustomization}
+        />
+      </div>
+    </>
   );
 }
